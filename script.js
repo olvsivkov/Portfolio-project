@@ -1,5 +1,3 @@
-console.log(`1. Вёрстка валидная +10\r\n2. Вёрстка семантическая +20\r\n3. Вёрстка соответствует макету +48\r\n4. Требования к css + 12\r\n5. Интерактивность, реализуемая через css +20\r\nИтог:110`)
-
 /* --- change photo and add active button ---*/
 
 const portfolioButton = document.querySelector('.portfolio-button')

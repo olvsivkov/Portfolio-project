@@ -496,6 +496,15 @@ h1 {
     height: 705px;
 }
 
+@media(max-width: 768px) {
+    .video-player {
+        width: 768px;
+        height: 418px;
+        top: 210px;
+        background-size: 768px 418px;
+    }
+}
+
 .video-player-bottom {
     position: absolute;
     justify-content: center;
@@ -530,10 +539,25 @@ body {
     width: 1400px;
 }
 
+@media(max-width: 768px) {
+    .video-player-mp4 {
+        width: 768px;
+        height: 418px;
+        top: 210px;
+        background-size: 768px 418px;
+    }
+}
+
 .controls {
     display: flex;
     justify-content: space-around;
     height: 50px;
+}
+
+@media(max-width: 768px) {
+    .controls {
+        width: 768px;
+    }
 }
 
 
@@ -544,8 +568,20 @@ body {
     display: flex;
 }
 
+@media(max-width: 768px) {
+    .volume {
+        width: 105px;
+    }
+}
+
 .range-sound {
     width: 260px;
+}
+
+@media(max-width: 768px) {
+    .range-sound {
+        width: 45px;
+    }
 }
 
 .range-container {
@@ -586,9 +622,21 @@ body {
     width: 950px;
 }
 
+@media(max-width: 768px) {
+    .progress {
+        width: 300px;
+    }
+}
+
 .progress-line {
     width: 950px;
     background: #be9e3b;
+}
+
+@media(max-width: 768px) {
+    .progress-line {
+        width: 300px;
+    }
 }
 
 input[type='range'] {
