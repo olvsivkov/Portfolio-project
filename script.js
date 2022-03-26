@@ -190,8 +190,10 @@ const lightButton = document.querySelectorAll('.portfolio-btn')
 const burgerMenu = document.querySelector('.menu-container')
 const menuItemWord = document.querySelectorAll('.menuItem')
 const BurgerLight = document.querySelectorAll('.line')
+const body = document.querySelector('body');
 
 thems.addEventListener('click', changeTheme);
+console.log(body)
 
 function changeTheme(event) {
     target = event.target
