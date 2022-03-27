@@ -53,6 +53,10 @@ link.forEach(el => {
     });
 });
 
+
+
+
+
 /* --- translate --- */
 
 function translate(lang) {
@@ -364,3 +368,31 @@ soundLine.addEventListener('change', changeSoundImg);
 soundbBtn.addEventListener('click', changeSoundImgClick);
 bigVideoBtn.addEventListener('click', showVideoBtn)
 progressLine.addEventListener('input', progressLineColor)
+
+
+/* --- local storage ---*/
+
+/* ---try to add local storige ---*/
+
+let lang = 'en';
+
+function setLocalStorage() { /*<- записываем в localstorage значение переменной до перезагрузки*/
+    localStorage.setItem('lang', lang);
+};
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() { /*<- после перезагрузки достаем из localstorage нужные значения и присваиваем их */
+    if (localStorage.getItem('lang') === 'en') {
+        en.classList.add('active-lang');
+        ru.classList.remove('active-lang');
+        lang = 'en';
+    }
+    if (localStorage.getItem('lang') === 'ru') {
+        en.classList.remove('active-lang');
+        ru.classList.add('active-lang');
+        lang = 'ru';
+    };
+}
+window.addEventListener('load', getLocalStorage);
+
+/* This bullshit in not work!!! =((( */
