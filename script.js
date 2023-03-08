@@ -46,27 +46,35 @@ const dataLng = document.querySelectorAll('[data-show]');
 const ru = document.querySelector('.ru');
 const en = document.querySelector('.en');
 
-link.forEach(el => {
-    el.addEventListener('click', () => {
-        langEl.querySelector('.active-lang').classList.remove('active-lang');
-        el.classList.add('active-lang');
-    });
-});
-
-
-
-
-
 /* --- translate --- */
+
 
 function translate(lang) {
     dataLng.forEach((e) => {
+        localStorage.setItem('language', lang)
         e.textContent = data[lang][e.dataset.show]
     })
 }
 
 ru.addEventListener('click', () => translate('ru'))
 en.addEventListener('click', () => translate('en'))
+
+function getLocalStorage() { 
+    if (localStorage.getItem('language') === 'en') {
+        lang = 'en';
+        dataLng.forEach((e) => {
+            e.textContent = data[lang][e.dataset.show]
+        })
+    }
+    if (localStorage.getItem('language') === 'ru') {
+        lang = 'ru';
+        dataLng.forEach((e) => {
+            e.textContent = data[lang][e.dataset.show]
+        })
+    };
+}
+window.addEventListener('load', getLocalStorage);
+
 
 const data = {
     'en': {
@@ -151,10 +159,6 @@ const data = {
     }
 }
 
-console.log(`Portfolio#1 \r\n1. Вёрстка валидная +10\r\n2. Вёрстка семантическая +20\r\n3. Вёрстка соответствует макету +48\r\n4. Требования к css + 12\r\n5. Интерактивность, реализуемая через css +20\r\nИтог:110`)
-
-console.log(`Portfolio#2 \r\n1. Вёрстка соответствует макету. Ширина экрана 768px +48\r\n2. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +15\r\n3. На ширине экрана 768рх и меньше реализовано адаптивное меню +22\r\nИтог:85`)
-
 /*--- @media menu ---*/
 
 const menu = document.querySelector(".menu");
@@ -197,11 +201,10 @@ const BurgerLight = document.querySelectorAll('.line')
 const body = document.querySelector('body');
 
 thems.addEventListener('click', changeTheme);
-console.log(body)
 
 function changeTheme(event) {
+ 
     target = event.target
-    console.log(target)
     if (target === darkTheme) {
         darkTheme.classList.toggle('theme-active');
         darkTheme.classList.add('theme-non-active');
@@ -217,6 +220,7 @@ function changeTheme(event) {
         BurgerLight.forEach((element) => {
             element.classList.toggle('line-light')
         })
+  
 
     }
     if (target === lightTheme) {
@@ -237,6 +241,8 @@ function changeTheme(event) {
     }
 }
 
+
+
 darkTheme.addEventListener('click', openLightTheme);
 lightTheme.addEventListener('click', openDarkTheme);
 
@@ -253,7 +259,8 @@ function openLightTheme() {
 
         element.classList.toggle('spn-light-theme')
     })
-
+ 
+ 
 }
 
 function openDarkTheme() {
@@ -269,6 +276,39 @@ function openDarkTheme() {
         element.classList.toggle('spn-light-theme')
     })
 }
+
+/* --- local storage: dark and light theme --- */
+
+function setLocalStorage() { 
+    if(lightTheme.classList.contains('theme-active')) localStorage.setItem('theme-color', 'light');
+    else localStorage.setItem('theme-color', 'dark');
+};
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorageColorTheme() { 
+    if (localStorage.getItem('theme-color') === 'light') {
+        openLightTheme()
+        darkTheme.classList.toggle('theme-active');
+        darkTheme.classList.toggle('theme-non-active');
+        lightTheme.classList.toggle('theme-active');
+        lightTheme.classList.toggle('theme-non-active');
+        
+        lightButton.forEach((element) => {
+            element.classList.toggle('light-theme')
+        });
+        burgerMenu.classList.toggle('menu-container-light')
+        menuItemWord.forEach((element) => {
+            element.classList.toggle('menuItem-light')
+        });
+        BurgerLight.forEach((element) => {
+            element.classList.toggle('line-light')
+        })
+    };
+}
+window.addEventListener('load', getLocalStorageColorTheme);
+ //  window.localStorage.removeItem('theme-color')
+
+
 
 /* --- js30-custom-video --- */
 
@@ -373,16 +413,16 @@ progressLine.addEventListener('input', progressLineColor)
 /* --- local storage ---*/
 
 /* ---try to add local storige ---*/
-
+/*
 let lang = 'en';
 
-function setLocalStorage() { /*<- записываем в localstorage значение переменной до перезагрузки*/
+function setLocalStorage() { /*<- записываем в localstorage значение переменной до перезагрузки
     localStorage.setItem('lang', lang);
 };
 window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() { /*<- после перезагрузки достаем из localstorage нужные значения и присваиваем их */
-    if (localStorage.getItem('lang') === 'en') {
+    /*if (localStorage.getItem('lang') === 'en') {
         en.classList.add('active-lang');
         ru.classList.remove('active-lang');
         lang = 'en';
@@ -394,5 +434,5 @@ function getLocalStorage() { /*<- после перезагрузки доста
     };
 }
 window.addEventListener('load', getLocalStorage);
-
+*/
 /* This bullshit in not work!!! =((( */

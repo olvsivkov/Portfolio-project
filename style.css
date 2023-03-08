@@ -105,7 +105,7 @@ html {
 /*--<<<header>>>--*/
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     /*position: relative;*/
 }
@@ -197,6 +197,7 @@ p {
     background-repeat: no-repeat;
     transition: 0.3s;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .iconTheme:hover {
@@ -211,6 +212,7 @@ p {
     background-repeat: no-repeat;
     transition: 0.3s;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .darkIconTheme:hover {
@@ -236,8 +238,8 @@ p {
     background: url('./assets/img/bg.jpg');
     background-repeat: no-repeat;
     background-position: center -90px;
-    width: 1440px;
-    height: 820px;
+    max-width: 1440px;
+    min-height: 820px;
     left: 0px;
 }
 
@@ -293,6 +295,7 @@ h1 {
     line-height: 80px;
     text-align: center;
     color: #BDAE82;
+    margin-top: 5%;
     /*top: 100px;*/
 }
 
@@ -314,12 +317,11 @@ h1 {
 }
 
 .skills {
-    position: relative;
-    height: 482px;
+
 }
 
 .title-skills {
-    position: absolute;
+   
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -338,15 +340,13 @@ h1 {
 }
 
 .skills-items {
-    position: absolute;
+ 
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 240px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 3%;
 }
 
 .skill-item {
@@ -418,11 +418,9 @@ h1 {
 
 .portfolio {
     position: relative;
-    height: 1500px;
 }
 
 .portfolio-title {
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -431,15 +429,11 @@ h1 {
 }
 
 .portfolio-button {
-    position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
-    width: 895px;
-    height: 55px;
-    left: 272px;
-    top: 240px;
+    margin-top: 3%;
 }
 
 .portfolio-btn {
@@ -460,12 +454,11 @@ h1 {
 }
 
 .photo {
-    position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    top: 355px;
+    margin-top: 3%;
 }
 
 .photo>img {
@@ -478,22 +471,11 @@ h1 {
 
 .video {
     position: relative;
-    height: 1000px;
 }
 
 .video-player {
-    position: absolute;
-    /*display: flex;*/
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 240px;
-    /*background-image: url(./assets/img/video-player.jpg);*/
-    width: 1400px;
-    height: 705px;
+    max-width: 1440px;
+    padding: 1%;
 }
 
 @media(max-width: 768px) {
@@ -536,7 +518,8 @@ body {
 }
 
 .video-player-mp4 {
-    width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 @media(max-width: 768px) {
@@ -575,7 +558,7 @@ body {
 }
 
 .range-sound {
-    width: 260px;
+    width: 100%;
 }
 
 @media(max-width: 768px) {
@@ -619,7 +602,7 @@ body {
 /* --- progress line --- */
 
 .progress {
-    width: 950px;
+    width: 95%;
 }
 
 @media(max-width: 768px) {
@@ -629,7 +612,7 @@ body {
 }
 
 .progress-line {
-    width: 950px;
+    width: 95%;
     background: #be9e3b;
 }
 
@@ -684,25 +667,20 @@ input[type="range"]::-ms-fill-upper {
 /*--<<< main => price >>>--*/
 
 .price {
-    height: 845px;
     position: relative;
 }
 
 .price-items {
-    position: absolute;
-    justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
-    width: 1400px;
-    height: 505px;
-    top: 240px;
+    max-width: 1400px;
+    min-height: 505px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 25px;
+    margin-top: 3%;
 }
 
 .price-item {
@@ -764,18 +742,19 @@ input[type="range"]::-ms-fill-upper {
 
 .contacts {
     position: relative;
-    width: 1440px;
-    height: 700px;
+    max-width: 1440px;
+    min-height: 700px;
+    margin-top: 5%;
     background-image: url(./assets/img/contacts.jpg);
 }
 
 .contacts-container {
-    /*border: 1px solid red;*/
     position: absolute;
     width: 450px;
     height: 445px;
-    left: 970px;
     top: 60px;
+    right: 0;
+    margin-right: 1%
 }
 
 .contacts-title {
@@ -820,7 +799,7 @@ input::placeholder {
 /*---<<< footer >>>---*/
 
 .footer {
-    width: 1440px;
+    max-width: 1440px;
     height: 150px;
     margin: 0 auto;
 }
@@ -829,7 +808,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .footer-item {
