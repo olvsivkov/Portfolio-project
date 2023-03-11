@@ -199,6 +199,7 @@ const burgerMenu = document.querySelector('.menu-container')
 const menuItemWord = document.querySelectorAll('.menuItem')
 const BurgerLight = document.querySelectorAll('.line')
 const body = document.querySelector('body');
+const footerLink = document.querySelectorAll('.media-item ')
 
 thems.addEventListener('click', changeTheme);
 
@@ -220,7 +221,7 @@ function changeTheme(event) {
         BurgerLight.forEach((element) => {
             element.classList.toggle('line-light')
         })
-  
+        footerLink.forEach(item => item.style.color = 'black')
 
     }
     if (target === lightTheme) {
@@ -238,6 +239,7 @@ function changeTheme(event) {
         BurgerLight.forEach((element) => {
             element.classList.toggle('line-light')
         })
+        footerLink.forEach(item => item.style.color = 'white')
     }
 }
 
@@ -303,10 +305,11 @@ function getLocalStorageColorTheme() {
         BurgerLight.forEach((element) => {
             element.classList.toggle('line-light')
         })
+        footerLink.forEach(item => item.style.color = 'black')
     };
 }
 window.addEventListener('load', getLocalStorageColorTheme);
- //  window.localStorage.removeItem('theme-color')
+ // window.localStorage.removeItem('theme-color')
 
 
 

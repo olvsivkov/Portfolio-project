@@ -189,6 +189,15 @@ p {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
+@media(min-width: 768px) and (max-width: 860px) {
+    .logo {
+        display: none;
+    }
+    .container-header {
+        padding-right: 20px;
+    }
+}
+
 .iconTheme {
     background: url('./assets/svg/carbon_sun.svg');
     width: 50px;
@@ -274,9 +283,9 @@ h1 {
     background-color: #bdae82;
     font-family: Inter;
     font-size: 20px;
-    position: absolute;
     bottom: 0px;
-    cursor: pointer
+    cursor: pointer;
+    margin-top: 5%;
 }
 
 .btn:hover {
@@ -304,7 +313,7 @@ h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    line-height: 80px;
+    line-height: 50px;
     text-align: center;
     color: #BDAE82;
     /*top: 100px;*/
@@ -375,7 +384,7 @@ h1 {
     background-size: 62px 50px;
     background-repeat: no-repeat;
     Width: 320px;
-    Height: 240px;
+    Height: 270px;
 }
 
 .skills-logo-styles:hover {
@@ -480,7 +489,7 @@ h1 {
 
 @media(max-width: 768px) {
     .video-player {
-        width: 768px;
+        width: 100%;
         height: 418px;
         top: 210px;
         background-size: 768px 418px;
@@ -524,10 +533,10 @@ body {
 
 @media(max-width: 768px) {
     .video-player-mp4 {
-        width: 768px;
+        width: 100%;
         height: 418px;
         top: 210px;
-        background-size: 768px 418px;
+ 
     }
 }
 
@@ -539,7 +548,8 @@ body {
 
 @media(max-width: 768px) {
     .controls {
-        width: 768px;
+        width: 100%;
+        flex-wrap: wrap;
     }
 }
 
@@ -547,23 +557,16 @@ body {
 /* --- volume ---*/
 
 .volume {
-    width: 305px;
     display: flex;
 }
 
 @media(max-width: 768px) {
-    .volume {
-        width: 105px;
-    }
-}
 
-.range-sound {
-    width: 100%;
 }
 
 @media(max-width: 768px) {
     .range-sound {
-        width: 45px;
+        width: 100%;
     }
 }
 
@@ -764,7 +767,7 @@ input[type="range"]::-ms-fill-upper {
 .contacts-block {
     position: absolute;
     height: 50px;
-    width: 448px;
+    width: 95%;
     top: 120px;
     background: rgba(0, 0, 0, 0.5);
     border: 2px solid #BDAE82;
@@ -793,6 +796,10 @@ input::placeholder {
     font-family: inherit;
     color: #bdae82;
     font-size: 30px;
+}
+
+.btn-contacts {
+   position: absolute;
 }
 
 
@@ -868,7 +875,7 @@ input::placeholder {
 
 @media (max-width: 768px) {
     body {
-        max-width: 768px;
+        max-width: 100%;
         margin: 0 auto;
     }
 }
@@ -882,7 +889,7 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .container {
-        max-width: 768px;
+        max-width: 100%;
         margin: 0 auto;
         position: relative;
     }
@@ -899,18 +906,14 @@ input::placeholder {
 @media (max-width: 768px) {
     .container-header {
         height: 90px;
-        width: 768px;
+        width: 100%;
         background-size: auto 620px;
         background-position: -5px -31px;
         overflow-x: hidden;
     }
 }
 
-@media(min-width: 768px) {
-    .logo {
-        margin-left: 38px;
-    }
-}
+
 
 @media (min-width: 769px) {
     .menu {
@@ -965,7 +968,7 @@ input::placeholder {
         position: fixed;
         transform: translateX(100%);
         transition: transform 0.2s;
-        width: 768px;
+        width: 100%;
         height: 1019px;
         right: 0;
         top: 0px;
@@ -1011,6 +1014,12 @@ input::placeholder {
         text-decoration: underline;
         transition: color 0.5s;
         color: rgb(204, 167, 88);
+    }
+}
+
+@media(max-width: 501px) {
+    .menu {
+        width: 140%;
     }
 }
 
@@ -1109,16 +1118,17 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .hero {
-        width: 768px;
+        width: 100%;
         height: 500px;
         background-position: -5px -120px;
         background-size: auto 620px;
+        min-height: 450px;
     }
     .hero-container {
-        Width: 390px;
-        Height: 300px;
+        Width: 95%;
+        Height: auto;
         Top: 48px;
-        Left: 60px;
+        Left: 10px;
     }
     h1 {
         font-family: Merriweather;
@@ -1139,9 +1149,7 @@ input::placeholder {
 
 @media (max-width: 320px) {
     .hero {
-        width: 320px;
         height: 590px;
-        background-position: -5px -90px;
         background-size: auto 620px;
     }
     .hero-container {
@@ -1169,14 +1177,11 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .skills {
-        width: 768px;
-        height: 709px;
+        width: 100%;
+
     }
     .skills-items {
-        width: 690px;
-        height: 520px;
-        /*left: 20px;*/
-        top: 205px;
+        width: 100%;
         justify-content: space-around
     }
     .skill-text {
@@ -1189,7 +1194,7 @@ input::placeholder {
         /*line-height: 40px;*/
     }
     .title-skills {
-        Width: 364px;
+        Width: 100%;
         Height: 80px;
         Top: 80px;
     }
@@ -1228,36 +1233,40 @@ input::placeholder {
         Top: 80px;
     }
     .skills-logo-styles {
-        Width: 350px;
         Height: 225px;
     }
 }
 
 @media(max-width: 768px) {
     .portfolio {
-        width: 768px;
-        height: 3890px;
+        width: 100%;
+        height: auto;
     }
     .portfolio-button {
-        width: 445px;
-        height: 115px;
-        left: 162px;
-        top: 229px;
+        width: 100%;
+        height: auto;
     }
     .photo {
-        position: absolute;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 25px;
-        top: 405px;
     }
 }
+
+@media(max-width: 459px) {
+    .photo>img {
+        Width: 95%;
+        Height: auto;
+    }
+}
+    
+
 
 @media(max-width: 320px) {
     .portfolio {
         width: 320px;
-        height: 3000px;
+        height: 3050px;
     }
     .portfolio-button {
         width: 300px;
@@ -1276,11 +1285,11 @@ input::placeholder {
 
 @media(max-width: 768px) {
     .video {
-        width: 768px;
+        width: 100%;
         height: 628px;
     }
     .video-player {
-        width: 768px;
+        width: 100%;
         height: 418px;
         top: 210px;
         background-size: 768px 418px;
@@ -1300,6 +1309,7 @@ input::placeholder {
     .video {
         width: 320px;
         height: 350px;
+        display: none;
     }
     .video-player {
         width: 300px;
@@ -1317,11 +1327,11 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .price {
-        width: 768px;
+        width: 100%;
         height: 1905px;
     }
     .price-items {
-        width: 768px;
+        width: 100%;
         height: 1615px;
         justify-content: center;
         top: 210px;
@@ -1362,10 +1372,10 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .contacts {
-        width: 768px;
+        width: 100%;
         height: 600px;
         background-position: -233px;
-        background-size: auto 600px;
+
     }
     .contacts-container {
         justify-content: center;
@@ -1374,7 +1384,7 @@ input::placeholder {
         margin-right: auto;
         left: 0;
         right: 0;
-        width: 450px;
+        width: 95%;
         height: 439px;
         top: 50px;
     }
@@ -1394,7 +1404,6 @@ input::placeholder {
         width: 320px;
         height: 600px;
         background-position: -233px;
-        background-size: auto 600px;
     }
     .contacts-container {
         justify-content: center;
@@ -1421,7 +1430,7 @@ input::placeholder {
 
 @media (max-width: 768px) {
     .footer {
-        width: 768px;
+        width: 100%;
         height: 190px;
     }
     .footer-items {
