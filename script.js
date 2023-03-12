@@ -11,7 +11,6 @@ let selectedBtn;
 
 portfolioButton.addEventListener('click', function(event) {
     let target = event.target;
-    console.log(target)
     active(target);
     showPicture(target)
 });
@@ -389,7 +388,6 @@ function showVideoBtn() {
     }
 };
 
-window.addEventListener('click', (event) => console.log(event.target))
 
 function progressLineColor() {
     const lineValue = progressLine.value;
