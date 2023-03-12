@@ -1,8 +1,8 @@
 # Portfolio-project 
-Link to deploy: 
+Link to deploy: https://olvsivkov.github.io/Portfolio-project
 
 # Portfolio-site.
-======
+
 
 This one of my first projects. This one-page website to wedding photographer. 
 This site have short description about photographer, contacts, costs photos, portfolio (winter, summer, autumn, spring) and video.
@@ -12,10 +12,10 @@ You can clicked season buttons (winter, summer, autumn, spring) and see new phot
 Also you can click video player buttom . Sound and progress bar are works.
 I maked this site is adaptive (from 1440 px to 320 px. Desktop and mobile devices) 
 
-======
+
 
 # Портфолио-сайт
-======
+
 
 Это один из моих первых проектов. Это одностраничный сайт для свадебного фотографа. На этом сайте есть краткое описание фотографа, контакты, стоимость фотографий, портфолио (зима, лето, осень, весна) и видео.
 В этом проекте я использую HTML, CSS и чистый JS.
