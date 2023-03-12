@@ -1,6 +1,14 @@
 /*Обнуление*/
 
 * {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+* {
     padding: 0;
     margin: 0;
     border: 0;
@@ -487,6 +495,10 @@ h1 {
     padding: 1%;
 }
 
+.big-video-player {
+    cursor: pointer;
+}
+
 @media(max-width: 768px) {
     .video-player {
         width: 100%;
@@ -560,6 +572,10 @@ body {
     display: flex;
 }
 
+.range-sound{
+    cursor: pointer;
+}
+
 @media(max-width: 768px) {
 
 }
@@ -576,6 +592,7 @@ body {
 
 .sound-btn {
     padding-right: 5px;
+    cursor: pointer;
 }
 
 .sound-btn:hover {
@@ -592,6 +609,7 @@ body {
     width: 50px;
     height: 40px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .play-btn:hover {
@@ -617,6 +635,7 @@ body {
 .progress-line {
     width: 95%;
     background: #be9e3b;
+    cursor: pointer;
 }
 
 @media(max-width: 768px) {
@@ -1294,14 +1313,11 @@ input::placeholder {
         top: 210px;
         background-size: 768px 418px;
     }
-    .video-player-bottom {
+
+    .big-video-player {
         width: 75px;
         height: 75px;
-        background-image: url("./assets/svg/Vector_768.svg");
         background-repeat: no-repeat;
-    }
-    .big-video-player {
-        display: none;
     }
 }
 

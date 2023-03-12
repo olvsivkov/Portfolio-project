@@ -327,6 +327,7 @@ const bigVideoBtn = document.querySelector('.big-video-player')
 
 /* --- create functions ---*/
 
+
 function videoStatus() {
     if (videoPlayer.paused) {
         videoPlayer.play()
@@ -346,9 +347,6 @@ function progressLineVideo() {
 
 function setProgressLine() {
     videoPlayer.currentTime = (progressLine.value * videoPlayer.duration) / 100
-    console.log(videoPlayer.currentTime)
-    console.log(progressLine.value)
-    console.log(videoPlayer.duration)
 }
 
 let soundRangeLine
@@ -356,9 +354,6 @@ let soundRangeLine
 function changeSound() {
     soundRangeLine = soundLine.value;
     videoPlayer.volume = soundRangeLine;
-    console.log(soundRangeLine)
-    console.log(videoPlayer.volume)
-
 }
 
 function changeSoundImg() {
@@ -382,7 +377,7 @@ function changeSoundImgClick() {
     } else videoPlayer.muted = false;
 }
 
-function showVideoBtn(event) {
+function showVideoBtn() {
     if (videoPlayer.paused) {
         videoPlayer.play()
         bigVideoBtn.classList.toggle('active-play');
@@ -393,6 +388,8 @@ function showVideoBtn(event) {
         playBtnImg.src = './assets/svg/video_svg/play.svg'
     }
 };
+
+window.addEventListener('click', (event) => console.log(event.target))
 
 function progressLineColor() {
     const lineValue = progressLine.value;
